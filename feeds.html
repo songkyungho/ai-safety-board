@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>피드 · AI 안전 기회</title>
+<meta name="description" content="AI 안전 분야 행사·교육·채용·연구 펀딩과 국내 AI 안전·신뢰성 관련 공고를 마감일 순으로 모은 곳">
+<meta property="og:title" content="피드 · AI 안전 기회">
+<meta property="og:description" content="AI 안전 분야 행사·교육·채용·연구 펀딩과 국내 AI 안전·신뢰성 관련 공고를 마감일 순으로 모은 곳">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://songkyungho.github.io/ai-safety-opportunities/feeds.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%235e4a2a'/%3E%3Cpath d='M16 6l3 7 7 3-7 3-3 7-3-7-7-3 7-3z' fill='%23e0a84a'/%3E%3C/svg%3E">
+<link rel="alternate" type="application/rss+xml" title="AI 안전 기회 — 새 항목" href="feed.xml">
+<link rel="alternate" type="application/json" title="AI 안전 기회 — JSON" href="opportunities.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+  color-scheme: light;
+  --ink: #243044; --ink-muted: #3a4658; --text-muted: #5c6670;
+  --text-primary: #243044; --text-secondary: #3a4658;
+  --plane: #f4f2eb; --surface-1: #fffcf6; --surface-2: #f7f4ec; --surface-pearl: #fffcf6;
+  --hairline: #ddd6c8; --border: #ddd6c8; --gridline: #ebe6da; --baseline: #ddd6c8;
+  --accent: #c45c48; --accent-focus: #5e4a2a;
+  --navy: #5e4a2a; --navy-2: #73603a; --gold: #e0a84a; --gold-strong: #ebba62;
+  --on-navy: #f4f2eb; --on-navy-muted: #e2d8c4; --sage: #3f5340; --on-dark: #f4f2eb;
+}
+* { box-sizing: border-box; }
+html { font-size: 16px; overflow-x: hidden; }
+body {
+  margin: 0; background: var(--plane); color: var(--ink);
+  font-family: "IBM Plex Sans KR", "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-size: 16px; line-height: 1.7; overflow-x: hidden;
+}
+a { color: var(--sage); }
+a:hover { color: var(--accent); }
+.global-nav { position: sticky; top: 0; z-index: 40; background: var(--navy); color: var(--on-navy); height: 40px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.global-nav-inner { max-width: 980px; margin: 0 auto; height: 40px; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; gap: 24px; font-size: 0.78rem; font-weight: 500; letter-spacing: -0.02em; min-width: 0; width: 100%; }
+.global-nav-left, .global-nav-right { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+.global-nav a, .global-nav .nav-current { color: var(--on-navy); text-decoration: none; white-space: nowrap; }
+.global-nav a { opacity: 0.78; }
+.global-nav a:hover { opacity: 1; color: var(--gold); }
+.global-nav .nav-current { opacity: 1; font-weight: 650; }
+header.page-head { background: linear-gradient(165deg, var(--navy) 0%, var(--navy-2) 100%); color: var(--on-navy); }
+.page-head-inner { max-width: 980px; margin: 0 auto; padding: 30px 20px 22px; }
+header.page-head h1 { font-size: 1.6rem; margin: 0 0 4px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.35; }
+header.page-head .tagline { margin: 0; font-size: 0.95rem; color: var(--on-navy-muted); line-height: 1.55; max-width: 48em; }
+header.page-head .tagline a { color: var(--on-navy-muted); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; font-weight: 500; }
+header.page-head .tagline a:hover { color: var(--gold); }
+.list-search.omni-wrap { position: relative; margin: 14px 0 18px; max-width: 100%; }
+.omni-wrap input { width: 100%; height: 40px; border: 1px solid var(--hairline); background: var(--surface-1); color: var(--ink); border-radius: 10px; padding: 0 14px; font-size: 0.95rem; font-family: inherit; letter-spacing: -0.02em; }
+.omni-wrap input::placeholder { color: var(--text-muted); }
+.omni-wrap input:focus { outline: 2px solid var(--navy); outline-offset: 1px; border-color: transparent; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 18px 20px 48px; }
+.site-footer { background: linear-gradient(165deg, var(--navy) 0%, var(--navy-2) 100%); color: var(--on-navy-muted); }
+.footer-inner { max-width: 980px; margin: 0 auto; padding: 28px 20px 32px; font-size: 0.78rem; text-align: center; line-height: 1.8; }
+.site-footer a { color: var(--on-navy-muted); }
+.site-footer a:hover { color: var(--gold); }
+
+
+[hidden] { display: none !important; }
+.urgent { background: var(--surface-1); border: 1px solid var(--hairline); border-left: 4px solid var(--accent); border-radius: 12px; padding: 12px 16px; margin: 0 0 18px; }
+.urgent h2 { font-size: 0.95rem; margin: 0 0 6px; letter-spacing: -0.02em; }
+.urgent h2 .muted { font-weight: 400; color: var(--text-muted); margin-left: 4px; }
+.urgent ol { list-style: none; margin: 0; padding: 0; }
+.urgent li { display: flex; gap: 10px; align-items: baseline; padding: 3px 0; font-size: 0.92rem; line-height: 1.45; }
+.urgent li a { color: var(--ink); text-decoration: none; }
+.urgent li a:hover { color: var(--accent); text-decoration: underline; }
+.dday { flex: 0 0 auto; font-variant-numeric: tabular-nums; font-weight: 700; font-size: 0.75rem; border-radius: 6px; padding: 1px 6px; color: var(--text-secondary); border: 1px solid var(--hairline); background: var(--surface-2); }
+.dday.hot { color: #fff; background: var(--accent); border-color: var(--accent); }
+.dday.warm { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, var(--hairline)); background: color-mix(in srgb, var(--accent) 8%, var(--surface-1)); }
+.tabs { display: flex; gap: 4px; flex-wrap: wrap; border-bottom: 2px solid var(--hairline); margin: 4px 0 12px; }
+.tabs button { font: inherit; font-size: 0.92rem; background: none; border: 0; padding: 8px 12px; margin-bottom: -2px; cursor: pointer; color: var(--text-secondary); border-bottom: 2px solid transparent; letter-spacing: -0.02em; }
+.tabs button .n { font-size: 0.75rem; color: var(--text-muted); margin-left: 3px; font-variant-numeric: tabular-nums; }
+.tabs button.active { color: var(--navy); border-bottom-color: var(--navy); font-weight: 700; }
+#listControls { margin: 0 0 16px; }
+.filter-toolbar { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--hairline); }
+.filter-toolbar:last-child { border-bottom: 0; }
+.filter-label { flex: 0 0 auto; min-width: 2.4em; margin-right: 4px; font-size: 0.75rem; font-weight: 700; color: var(--text-muted); white-space: nowrap; }
+button.filter-chip { display: inline-flex; align-items: center; gap: 5px; border: 1px solid var(--hairline); background: transparent; color: var(--text-secondary); border-radius: 999px; padding: 3px 10px; font: inherit; font-size: 0.75rem; line-height: 1.35; cursor: pointer; white-space: nowrap; }
+button.filter-chip:hover { color: var(--ink); border-color: var(--text-muted); }
+button.filter-chip .n { font-variant-numeric: tabular-nums; color: var(--text-muted); }
+button.filter-chip.active { border-color: var(--navy); color: var(--navy); font-weight: 600; background: color-mix(in srgb, var(--gold) 22%, var(--surface-1)); }
+button.filter-more { border: 1px dashed var(--hairline); background: transparent; color: var(--text-muted); border-radius: 999px; padding: 3px 10px; font: inherit; font-size: 0.75rem; cursor: pointer; }
+.result-line { font-size: 0.8rem; color: var(--text-muted); margin: 0 0 6px; display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.result-line button { font: inherit; font-size: 0.8rem; background: none; border: 0; color: var(--sage); cursor: pointer; text-decoration: underline; padding: 0; }
+.group-label { font-weight: 600; font-size: 1.05rem; letter-spacing: -0.37px; padding: 10px 0 6px; color: var(--ink); }
+.group-label .muted { font-weight: 400; color: var(--text-muted); margin-left: 4px; }
+details.closed-group summary { cursor: pointer; font-weight: 600; font-size: 1.05rem; padding: 10px 0 6px; list-style: none; border-top: 1px solid var(--hairline); margin-top: 8px; }
+details.closed-group summary::before { content: "▸ "; color: var(--text-muted); font-weight: 400; }
+details.closed-group[open] summary::before { content: "▾ "; }
+.card { background: var(--surface-1); border: 1px solid var(--hairline); border-radius: 14px; padding: 14px 18px; margin-bottom: 10px; scroll-margin-top: 56px; }
+.card.is-closed { opacity: 0.72; }
+.card-head { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; font-size: 0.75rem; color: var(--text-muted); }
+.kind-badge { font-size: 0.75rem; font-weight: 600; border-radius: 999px; padding: 1px 8px; background: color-mix(in srgb, var(--chip) 13%, var(--surface-1)); color: var(--chip); border: 1px solid color-mix(in srgb, var(--chip) 32%, var(--hairline)); }
+.k-event { --chip: #a16207; } .k-training { --chip: #0f766e; } .k-job { --chip: #474284; } .k-funding { --chip: #be123c; } .k-call { --chip: #1d4ed8; }
+.kr-badge { font-weight: 600; color: #1d4ed8; }
+.status-tag { border-radius: 6px; padding: 0 6px; border: 1px solid var(--hairline); }
+.card h3 { margin: 6px 0 2px; font-size: 1.05rem; line-height: 1.45; letter-spacing: -0.37px; font-weight: 700; }
+.card h3 a { color: #1d4ed8; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.card h3 a:hover { color: #1e40af; }
+.orig { font-size: 0.85rem; color: var(--text-muted); margin: 0 0 2px; }
+.ribbon-row { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; align-items: center; }
+.kw-tag { display: inline-flex; border: 1px solid var(--hairline); border-radius: 999px; padding: 1px 8px; font-size: 0.72rem; color: var(--text-secondary); background: var(--surface-2); }
+.topic-tag { display: inline-flex; border-radius: 999px; padding: 1px 8px; font-size: 0.72rem; font-weight: 600; color: var(--navy); border: 1px solid color-mix(in srgb, var(--navy) 30%, var(--hairline)); background: color-mix(in srgb, var(--gold) 14%, var(--surface-1)); cursor: pointer; }
+.card-summary { margin: 8px 0 0; font-size: 0.92rem; line-height: 1.55; color: var(--text-secondary); }
+.card-actions { margin-top: 8px; display: flex; gap: 12px; font-size: 0.75rem; flex-wrap: wrap; }
+.card-actions button, .card-actions a { font: inherit; background: none; border: 0; padding: 0; color: var(--text-muted); cursor: pointer; text-decoration: none; }
+.card-actions button:hover, .card-actions a:hover { color: var(--accent); }
+.more-btn { display: block; margin: 8px auto 0; font: inherit; font-size: 0.85rem; padding: 6px 16px; border-radius: 999px; border: 1px solid var(--hairline); background: var(--surface-1); cursor: pointer; color: var(--text-secondary); }
+.empty { color: var(--text-muted); padding: 24px 0; text-align: center; }
+.prose h2 { font-size: 1.15rem; margin: 28px 0 8px; letter-spacing: -0.02em; }
+.prose p, .prose li { color: var(--text-secondary); }
+.prose table { border-collapse: collapse; width: 100%; font-size: 0.88rem; margin: 8px 0 16px; }
+.prose th, .prose td { border-bottom: 1px solid var(--hairline); text-align: left; padding: 6px 8px; vertical-align: top; }
+.prose th { color: var(--text-muted); font-weight: 600; }
+.prose code { background: var(--surface-2); border: 1px solid var(--hairline); border-radius: 4px; padding: 0 4px; font-size: 0.85em; }
+@media (max-width: 640px) { .tabs button { padding: 7px 8px; font-size: 0.85rem; } .card { padding: 12px 14px; } }
+
+</style>
+</head>
+<body>
+<nav class="global-nav" aria-label="사이트"><div class="global-nav-inner"><div class="global-nav-left"><a href="https://songkyungho.github.io/ai-safety-digest/" target="_blank" rel="noopener noreferrer">AI 안전 다이제스트</a><a href="https://songkyungho.github.io/ai-safety-library/" target="_blank" rel="noopener noreferrer">AI 안전 라이브러리</a><a href="https://songkyungho.github.io/ai-safety-research/" target="_blank" rel="noopener noreferrer">AI 안전 연구</a><a href="https://songkyungho.github.io/ai-safety-glossary/" target="_blank" rel="noopener noreferrer">AI 안전 용어집</a><a href="index.html">AI 안전 기회</a></div><div class="global-nav-right"><a href="about.html">소개</a><span class="nav-current">피드</span><a href="about/log.html">업데이트</a></div></div></nav><header class="page-head"><div class="page-head-inner"><h1>피드</h1><p class="tagline">RSS · JSON · 마감 캘린더(ICS) 구독</p></div></header>
+<main class="wrap">
+<div class="prose">
+<h2>마감 캘린더</h2>
+<p>열린 항목의 마감일을 종일 일정으로 담은 캘린더입니다. 구글·애플 캘린더에서 <b>URL로 구독</b>하면 매일 갱신됩니다.</p>
+<p><code>https://songkyungho.github.io/ai-safety-opportunities/deadlines.ics</code> · <a href="deadlines.ics">받기</a></p>
+<p>각 카드의 "마감 일정 추가"로 하나씩 넣을 수도 있습니다.</p>
+<h2>RSS</h2>
+<table><tr><th>구분</th><th>주소</th></tr><tr><td>전체 새 항목</td><td><a href="feed.xml">feed.xml</a></td></tr><tr><td>행사</td><td><a href="feeds/event.xml">feeds/event.xml</a></td></tr><tr><td>교육·펠로십</td><td><a href="feeds/training.xml">feeds/training.xml</a></td></tr><tr><td>채용</td><td><a href="feeds/job.xml">feeds/job.xml</a></td></tr><tr><td>펀딩</td><td><a href="feeds/funding.xml">feeds/funding.xml</a></td></tr><tr><td>국내 공고</td><td><a href="feeds/call.xml">feeds/call.xml</a></td></tr></table>
+<h2>JSON</h2>
+<p><a href="opportunities.json">opportunities.json</a> — 사이트가 쓰는 공개 필드 전체. 필드: id, kind, title, title_ko, org, url, posted, deadline, status, start, end, location, korea_access, fields, source …</p>
+</div>
+</main>
+<footer class="site-footer"><div class="footer-inner">만든 사람: 인공지능안전연구소 <a href="https://songkyungho.github.io" target="_blank" rel="noopener">송경호</a> · 문의/오류제보: <a href="mailto:songkyungho@etri.re.kr">songkyungho@etri.re.kr</a><br>데이터 출처: <a href="https://www.aisafety.com" target="_blank" rel="noopener">AISafety.com</a> (CC BY 4.0) · <a href="https://www.data.go.kr" target="_blank" rel="noopener">공공데이터포털</a> 조달청·ALIO OpenAPI · EA Opportunities · 각 기관 게시판·채용 페이지 — 자세한 내용은 소개</div></footer>
+
+</body>
+</html>
