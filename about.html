@@ -3,15 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>소개 · AI 안전 기회</title>
-<meta name="description" content="AI 안전 분야 행사·교육·채용·연구 펀딩과 국내 AI 안전·신뢰성 관련 공고를 마감일 순으로 모은 곳">
-<meta property="og:title" content="소개 · AI 안전 기회">
-<meta property="og:description" content="AI 안전 분야 행사·교육·채용·연구 펀딩과 국내 AI 안전·신뢰성 관련 공고를 마감일 순으로 모은 곳">
+<title>소개 · AI 안전 알림판</title>
+<meta name="description" content="AI 안전 분야 행사·학회·교육·채용·연구 펀딩과 국내 AI 안전·신뢰성 관련 공고를 마감일 순으로 모은 곳">
+<meta property="og:title" content="소개 · AI 안전 알림판">
+<meta property="og:description" content="AI 안전 분야 행사·학회·교육·채용·연구 펀딩과 국내 AI 안전·신뢰성 관련 공고를 마감일 순으로 모은 곳">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://songkyungho.github.io/ai-safety-opportunities/about.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%235e4a2a'/%3E%3Cpath d='M16 6l3 7 7 3-7 3-3 7-3-7-7-3 7-3z' fill='%23e0a84a'/%3E%3C/svg%3E">
-<link rel="alternate" type="application/rss+xml" title="AI 안전 기회 — 새 항목" href="feed.xml">
-<link rel="alternate" type="application/json" title="AI 안전 기회 — JSON" href="opportunities.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -92,11 +90,14 @@ button.filter-more { border: 1px dashed var(--hairline); background: transparent
 details.closed-group summary { cursor: pointer; font-weight: 600; font-size: 1.05rem; padding: 10px 0 6px; list-style: none; border-top: 1px solid var(--hairline); margin-top: 8px; }
 details.closed-group summary::before { content: "▸ "; color: var(--text-muted); font-weight: 400; }
 details.closed-group[open] summary::before { content: "▾ "; }
-.card { background: var(--surface-1); border: 1px solid var(--hairline); border-radius: 14px; padding: 14px 18px; margin-bottom: 10px; scroll-margin-top: 56px; }
+.card { background: var(--surface-1); border: 1px solid var(--hairline); border-left: 4px solid var(--chip, var(--hairline)); border-radius: 14px; padding: 14px 18px; margin-bottom: 10px; scroll-margin-top: 56px; }
 .card.is-closed { opacity: 0.72; }
 .card-head { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; font-size: 0.75rem; color: var(--text-muted); }
 .kind-badge { white-space: nowrap; flex: 0 0 auto; font-size: 0.75rem; font-weight: 600; border-radius: 999px; padding: 1px 8px; background: color-mix(in srgb, var(--chip) 13%, var(--surface-1)); color: var(--chip); border: 1px solid color-mix(in srgb, var(--chip) 32%, var(--hairline)); }
-.k-event { --chip: #a16207; } .k-training { --chip: #0f766e; } .k-job { --chip: #474284; } .k-funding { --chip: #be123c; } .k-call { --chip: #1d4ed8; }
+.k-event { --chip: #c2410c; } .k-conference { --chip: #7c3aed; } .k-training { --chip: #0f766e; } .k-job { --chip: #474284; } .k-funding { --chip: #be123c; } .k-call { --chip: #1d4ed8; }
+.tabs button[data-type]::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--chip, transparent); margin-right: 6px; vertical-align: 1px; }
+.tabs button[data-type="all"]::before { display: none; }
+.tabs button.active { color: var(--chip, var(--navy)); border-bottom-color: var(--chip, var(--navy)); }
 .kr-badge { font-weight: 600; color: #1d4ed8; }
 .status-tag { border-radius: 6px; padding: 0 6px; border: 1px solid var(--hairline); }
 .card h3 { margin: 6px 0 2px; font-size: 1.05rem; line-height: 1.45; letter-spacing: -0.37px; font-weight: 700; }
@@ -104,8 +105,11 @@ details.closed-group[open] summary::before { content: "▾ "; }
 .card h3 a:hover { color: #1e40af; }
 .orig { font-size: 0.85rem; color: var(--text-muted); margin: 0 0 2px; }
 .ribbon-row { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; align-items: center; }
+.kw-tag.award { color: #15803d; border-color: color-mix(in srgb, #15803d 35%, var(--hairline)); background: color-mix(in srgb, #15803d 9%, var(--surface-1)); font-weight: 600; }
 .kw-tag { display: inline-flex; border: 1px solid var(--hairline); border-radius: 999px; padding: 1px 8px; font-size: 0.72rem; color: var(--text-secondary); background: var(--surface-2); }
-.topic-tag { display: inline-flex; border-radius: 999px; padding: 1px 8px; font-size: 0.72rem; font-weight: 600; color: var(--navy); border: 1px solid color-mix(in srgb, var(--navy) 30%, var(--hairline)); background: color-mix(in srgb, var(--gold) 14%, var(--surface-1)); cursor: pointer; }
+.topic-tag { display: inline-flex; border-radius: 999px; padding: 1px 8px; font-size: 0.72rem; font-weight: 600; color: var(--topic, var(--navy)); border: 1px solid color-mix(in srgb, var(--topic, var(--navy)) 35%, var(--hairline)); background: color-mix(in srgb, var(--topic, var(--navy)) 11%, var(--surface-1)); cursor: pointer; }
+button.filter-chip[data-f] { color: var(--topic); border-color: color-mix(in srgb, var(--topic) 30%, var(--hairline)); }
+button.filter-chip[data-f].active { background: color-mix(in srgb, var(--topic) 16%, var(--surface-1)); border-color: var(--topic); color: var(--topic); }
 .card-summary { margin: 8px 0 0; font-size: 0.92rem; line-height: 1.55; color: var(--text-secondary); }
 .card-actions { margin-top: 8px; display: flex; gap: 12px; font-size: 0.75rem; flex-wrap: wrap; }
 .card-actions button, .card-actions a { font: inherit; background: none; border: 0; padding: 0; color: var(--text-muted); cursor: pointer; text-decoration: none; }
@@ -123,19 +127,21 @@ details.closed-group[open] summary::before { content: "▾ "; }
 </style>
 </head>
 <body>
-<nav class="global-nav" aria-label="사이트"><div class="global-nav-inner"><div class="global-nav-left"><a href="https://songkyungho.github.io/ai-safety-digest/" target="_blank" rel="noopener noreferrer">AI 안전 다이제스트</a><a href="https://songkyungho.github.io/ai-safety-library/" target="_blank" rel="noopener noreferrer">AI 안전 라이브러리</a><a href="https://songkyungho.github.io/ai-safety-research/" target="_blank" rel="noopener noreferrer">AI 안전 연구</a><a href="https://songkyungho.github.io/ai-safety-glossary/" target="_blank" rel="noopener noreferrer">AI 안전 용어집</a><a href="index.html">AI 안전 기회</a></div><div class="global-nav-right"><a href="adoption.html">공공 AI 도입</a><span class="nav-current">소개</span><a href="feeds.html">피드</a><a href="about/log.html">업데이트</a></div></div></nav><header class="page-head"><div class="page-head-inner"><h1>소개</h1><p class="tagline">무엇을 어디서 모으고 어떻게 분류하는지</p></div></header>
+<nav class="global-nav" aria-label="사이트"><div class="global-nav-inner"><div class="global-nav-left"><a href="https://songkyungho.github.io/ai-safety-digest/" target="_blank" rel="noopener noreferrer">AI 안전 다이제스트</a><a href="https://songkyungho.github.io/ai-safety-library/" target="_blank" rel="noopener noreferrer">AI 안전 라이브러리</a><a href="https://songkyungho.github.io/ai-safety-research/" target="_blank" rel="noopener noreferrer">AI 안전 연구</a><a href="https://songkyungho.github.io/ai-safety-glossary/" target="_blank" rel="noopener noreferrer">AI 안전 용어집</a><a href="index.html">AI 안전 알림판</a></div><div class="global-nav-right"><a href="adoption.html">공공 AI 도입</a><span class="nav-current">소개</span><a href="about/log.html">업데이트</a></div></div></nav><header class="page-head"><div class="page-head-inner"><h1>소개</h1><p class="tagline">무엇을 어디서 모으고 어떻게 분류하는지</p></div></header>
 <main class="wrap">
 <div class="prose">
-<p>AI 안전 분야의 <b>행사·교육(펠로십)·채용·연구 펀딩</b>과, 한국 공공부문의 <b>AI 안전·신뢰성·거버넌스 관련 공고</b>(입찰·사전규격·사업공고)를 한곳에 모아 마감일 순으로 보여 줍니다.
-매일 자동으로 갱신됩니다. <a href="https://songkyungho.github.io/ai-safety-digest/">AI 안전 다이제스트</a> 시리즈의 하나입니다.</p>
+<p>AI 안전 분야의 <b>행사·학회·교육(펠로십)·채용·연구 펀딩</b>과, 한국 공공부문의 <b>AI 안전·신뢰성·거버넌스 관련 공고</b>(입찰·사전규격·사업공고)를 한곳에 모아 마감일 순으로 보여 줍니다.
+매일 밤 자동으로 갱신됩니다. <a href="https://songkyungho.github.io/ai-safety-digest/">AI 안전 다이제스트</a> 시리즈의 하나입니다. <a href="adoption.html">공공 AI 도입 현황</a>에서는 같은 조달 자료로 공공부문의 AI 사업과 수주 업체를 봅니다.</p>
 <h2>무엇을 어디서 모으나</h2>
 <table><tr><th>구분</th><th>출처</th><th>방식</th></tr>
 <tr><td>행사·교육·채용·펀딩</td><td><a href="https://www.aisafety.com/developers">AISafety.com Data API</a> (채용은 80,000 Hours 게시판 기반)</td><td>공개 API · CC BY 4.0</td></tr>
 <tr><td>펀딩·펠로십·교육·행사 보완</td><td><a href="https://www.effectivealtruism.org/opportunities">EA Opportunities</a> (AI safety &amp; policy 분야), EA Forum 펀딩 공지</td><td>공개 페이지 · RSS</td></tr>
+<tr><td>학회</td><td>AI·AI 안전 관련 국제 학회와 국내 학회의 접수 일정 (직접 조사, 공식 페이지 확인. 확인되지 않은 일정은 '일정 추정'으로 표시)</td><td>수동 조사</td></tr>
 <tr><td>연구소 채용 보완</td><td>Anthropic·OpenAI·xAI·Mistral·Cohere·Thinking Machines·Reflection·LG AI연구원·상하이 AI랩의 공개 채용 페이지 (안전 관련 직무만)</td><td>공개 채용 API</td></tr>
 <tr><td>국내 공고</td><td>조달청 나라장터 입찰공고·사전규격 (<a href="https://www.data.go.kr">공공데이터포털</a> OpenAPI)</td><td>OpenAPI · 이용허락 제한 없음</td></tr>
 <tr><td>국내 공고·행사</td><td>NIA·KISA·NIPA·KISDI·방송미디어통신위원회 게시판</td><td>공개 게시판</td></tr>
-<tr><td>공공기관 채용</td><td>ALIO 공공기관 채용정보 (공공데이터포털 OpenAPI)</td><td>AI·데이터·정보보호 관련만</td></tr>
+<tr><td>국내 채용</td><td>ALIO 공공기관 채용, 클린아이 지방공공기관 채용(공공데이터포털 OpenAPI, AI·데이터·정보보호 관련만), ETRI 채용 게시판(인공지능안전연구소 모집이 들어 있는 공고)</td><td>OpenAPI · 공개 게시판</td></tr>
+<tr><td>수주(공공 AI 도입 현황)</td><td>나라장터 계약·낙찰 (공공데이터개방표준서비스)</td><td>OpenAPI</td></tr>
 </table>
 <p>robots.txt가 막은 곳이나 자동 수집 방지 장치를 풀어야 하는 곳은 모으지 않습니다. Google DeepMind·Meta 채용은 AISafety.com에 올라온 것만 보입니다.</p>
 <h2>어떻게 고르나</h2>
@@ -151,13 +157,13 @@ details.closed-group[open] summary::before { content: "▾ "; }
 <ul>
 <li>국내 공고는 <b>공고명만</b> 봅니다. 제목에 AI가 없는데 과업 내용이 AI 안전인 공고(예: 정책연구 묶음 공고)는 빠질 수 있습니다.</li>
 <li>마감일이 출처마다 다릅니다. 입찰은 입찰서 제출 마감, 사전규격은 의견 등록 마감, 행사는 신청 마감(없으면 행사일)입니다. 지원 전 원문을 꼭 확인하세요.</li>
-<li>채용은 대부분 마감일이 없어 '상시'로 둡니다.</li>
+<li>채용은 대부분 마감일이 없어 '상시'로 둡니다. 인공지능안전연구소 채용은 ETRI 공개채용 안에 들어 있어, 세부 분야는 공고 첨부를 봐야 합니다.</li>
+<li>화면에서 내려간 지난 항목도 지우지 않고 보관합니다.</li>
 <li>번역 제목과 분야 태그는 자동이라 틀릴 수 있습니다. 오류는 아래 메일로 알려 주세요.</li>
 </ul>
-<h2>데이터 이용</h2>
-<p>전체 목록은 <a href="opportunities.json">opportunities.json</a>, 새 항목은 <a href="feed.xml">RSS</a>, 마감일은 <a href="deadlines.ics">캘린더(ICS)</a>로 받을 수 있습니다.
-AISafety.com에서 온 항목은 CC BY 4.0(출처: AISafety.com)을 따릅니다.</p>
-<p class="result-line">마지막 갱신 2026-10-04 21:01</p>
+<h2>데이터 출처 표기</h2>
+<p>AISafety.com에서 온 항목은 CC BY 4.0(출처: AISafety.com)을 따릅니다.</p>
+<p class="result-line">마지막 갱신 2026-10-04 21:31</p>
 </div>
 </main>
 <footer class="site-footer"><div class="footer-inner">만든 사람: 인공지능안전연구소 <a href="https://songkyungho.github.io" target="_blank" rel="noopener">송경호</a> · 문의/오류제보: <a href="mailto:songkyungho@etri.re.kr">songkyungho@etri.re.kr</a><br>데이터 출처: <a href="https://www.aisafety.com" target="_blank" rel="noopener">AISafety.com</a> (CC BY 4.0) · <a href="https://www.data.go.kr" target="_blank" rel="noopener">공공데이터포털</a> 조달청·ALIO OpenAPI · EA Opportunities · 각 기관 게시판·채용 페이지 — 자세한 내용은 소개</div></footer>
