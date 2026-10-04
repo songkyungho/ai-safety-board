@@ -8,7 +8,7 @@
 <meta property="og:title" content="업데이트 · AI 안전 알림판">
 <meta property="og:description" content="AI 안전 분야 행사·학회·교육·채용·연구 펀딩과 국내 AI 안전·신뢰성 관련 공고를 마감일 순으로 모은 곳">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://songkyungho.github.io/ai-safety-opportunities/about/log.html">
+<meta property="og:url" content="https://songkyungho.github.io/ai-safety-board/about/log.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%235e4a2a'/%3E%3Cpath d='M16 6l3 7 7 3-7 3-3 7-3-7-7-3 7-3z' fill='%23e0a84a'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,6 +60,18 @@ header.page-head .tagline a:hover { color: var(--gold); }
 
 
 [hidden] { display: none !important; }
+.tiles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin: 4px 0 14px; }
+.tile { display: block; text-align: left; font: inherit; cursor: pointer; background: var(--surface-1); border: 1px solid var(--hairline); border-radius: 14px; padding: 12px 14px 11px; color: var(--ink); min-height: 108px; }
+.tile:hover { border-color: #b9ae98; box-shadow: 0 2px 10px rgba(36,48,68,.06); }
+.tile .t-l { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+.tile .t-v { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 30px; font-weight: 600; letter-spacing: -.5px; margin: 4px 0 2px; }
+.tile .t-v > span { white-space: nowrap; }
+.tile .t-v small { font-size: 14px; font-weight: 500; color: var(--text-muted); margin-left: 3px; }
+.tile .t-s { font-size: 12px; color: var(--text-secondary); line-height: 1.45; }
+.tile .spark { flex: 0 1 96px; width: 96px; height: 28px; }
+.tile.warn { border-color: #ecd3a8; background: #fbf4e8; } .tile.warn .t-s { color: #8a5a18; }
+@media (max-width: 980px) { .tiles { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px) { .tiles { grid-template-columns: repeat(2, 1fr); } .tile .t-v { font-size: 24px; } }
 .urgent { background: var(--surface-1); border: 1px solid var(--hairline); border-left: 4px solid var(--accent); border-radius: 12px; padding: 12px 16px; margin: 0 0 18px; }
 .urgent h2 { font-size: 0.95rem; margin: 0 0 6px; letter-spacing: -0.02em; }
 .urgent h2 .muted { font-weight: 400; color: var(--text-muted); margin-left: 4px; }
@@ -74,7 +86,7 @@ header.page-head .tagline a:hover { color: var(--gold); }
 .tabs button { font: inherit; font-size: 0.92rem; background: none; border: 0; padding: 8px 12px; margin-bottom: -2px; cursor: pointer; color: var(--text-secondary); border-bottom: 2px solid transparent; letter-spacing: -0.02em; }
 .tabs button .n { font-size: 0.75rem; color: var(--text-muted); margin-left: 3px; font-variant-numeric: tabular-nums; }
 .tabs button.active { color: var(--navy); border-bottom-color: var(--navy); font-weight: 700; }
-#listControls { margin: 0 0 16px; }
+#listControls { margin: 0 0 4px; }
 .filter-toolbar { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--hairline); }
 .filter-toolbar:last-child { border-bottom: 0; }
 .filter-label { flex: 0 0 auto; min-width: 2.4em; margin-right: 4px; font-size: 0.75rem; font-weight: 700; color: var(--text-muted); white-space: nowrap; }
@@ -92,7 +104,11 @@ details.closed-group summary::before { content: "▸ "; color: var(--text-muted)
 details.closed-group[open] summary::before { content: "▾ "; }
 .card { background: var(--surface-1); border: 1px solid var(--hairline); border-left: 4px solid var(--chip, var(--hairline)); border-radius: 14px; padding: 14px 18px; margin-bottom: 10px; scroll-margin-top: 56px; }
 .card.is-closed { opacity: 0.72; }
-.card-head { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; font-size: 0.75rem; color: var(--text-muted); }
+.card-head { display: flex; align-items: flex-start; gap: 8px; font-size: 0.75rem; color: var(--text-muted); }
+.head-tags { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; flex: 1; min-width: 0; }
+.copy-btn { flex-shrink: 0; margin-left: auto; border: 1px solid var(--hairline); background: transparent; color: var(--text-muted); border-radius: 999px; padding: 3px 12px; font: inherit; font-size: 0.75rem; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.copy-btn:hover, .copy-btn:active { color: var(--sage); border-color: var(--sage); }
+.copy-btn.copied { color: #15803d; border-color: #15803d; }
 .kind-badge { white-space: nowrap; flex: 0 0 auto; font-size: 0.75rem; font-weight: 600; border-radius: 999px; padding: 1px 8px; background: color-mix(in srgb, var(--chip) 13%, var(--surface-1)); color: var(--chip); border: 1px solid color-mix(in srgb, var(--chip) 32%, var(--hairline)); }
 .k-event { --chip: #c2410c; } .k-conference { --chip: #7c3aed; } .k-training { --chip: #0f766e; } .k-job { --chip: #474284; } .k-funding { --chip: #be123c; } .k-call { --chip: #1d4ed8; }
 .tabs button[data-type]::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--chip, transparent); margin-right: 6px; vertical-align: 1px; }
