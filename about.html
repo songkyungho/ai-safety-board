@@ -17,7 +17,6 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 :root {
   color-scheme: light;
   --ink: #243044; --ink-muted: #3a4658; --text-muted: #5c6670;
@@ -28,43 +27,109 @@
   --navy: #5e4a2a; --navy-2: #73603a; --gold: #e0a84a; --gold-strong: #ebba62;
   --on-navy: #f4f2eb; --on-navy-muted: #e2d8c4; --sage: #3f5340; --on-dark: #f4f2eb;
 }
+
 * { box-sizing: border-box; }
 html { font-size: 16px; overflow-x: clip; }
 body {
-  margin: 0; background: var(--plane); color: var(--ink);
-  font-family: "IBM Plex Sans KR", "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-  font-size: 16px; line-height: 1.7; overflow-x: clip;
+  margin: 0;
+  background: var(--plane);
+  color: var(--ink);
+  font-family: "IBM Plex Sans KR", "IBM Plex Sans", -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: clip;
 }
 a { color: var(--sage); }
 a:hover { color: var(--accent); }
-.global-nav { position: sticky; top: 0; z-index: 40; background: var(--navy); color: var(--on-navy); height: 40px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-.global-nav-inner { max-width: 980px; margin: 0 auto; height: 40px; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; gap: 24px; font-size: 0.78rem; font-weight: 500; letter-spacing: -0.02em; min-width: 0; width: 100%; }
-.global-nav-left, .global-nav-right { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
-.global-nav a, .global-nav .nav-current { color: var(--on-navy); text-decoration: none; white-space: nowrap; }
+.viz-root { min-height: 100vh; background: var(--plane); color: var(--ink); overflow-x: clip; }
+.global-nav {
+  position: sticky; top: 0; z-index: 40;
+  background: var(--navy); color: var(--on-navy); height: 40px;
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+}
+.global-nav-inner {
+  max-width: 980px; margin: 0 auto; height: 40px; padding: 0 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  font-size: 0.78rem; font-weight: 500; letter-spacing: -0.02em;
+  min-width: 0; width: 100%;
+}
+.global-nav-left, .global-nav-right {
+  display: flex; align-items: center; gap: 16px; flex-shrink: 0;
+}
+.global-nav a, .global-nav .nav-current {
+  color: var(--on-navy); text-decoration: none; white-space: nowrap;
+}
 .global-nav a { opacity: 0.78; }
 .global-nav a:hover { opacity: 1; color: var(--gold); }
 .global-nav .nav-current { opacity: 1; font-weight: 650; }
-header.page-head { background: linear-gradient(165deg, var(--navy) 0%, var(--navy-2) 100%); color: var(--on-navy); }
-.page-head-inner { max-width: 980px; margin: 0 auto; padding: 30px 20px 22px; }
-header.page-head h1 { font-size: 1.6rem; margin: 0 0 4px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.35; }
+header.page-head {
+  background: linear-gradient(165deg, var(--navy) 0%, var(--navy-2) 100%);
+  color: var(--on-navy);
+}
+.page-head-inner {
+  max-width: 980px; margin: 0 auto; padding: 30px 20px 22px;
+}
+header.page-head h1 {
+  font-size: 1.6rem; margin: 0 0 4px; font-weight: 700; letter-spacing: -0.01em;
+  line-height: 1.35;
+}
 header.page-head .title-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin: 0 0 4px; }
 header.page-head .title-row h1 { margin: 0; }
 a.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); text-decoration: none;
   padding: 2px 10px; border-radius: 999px; font-size: 0.82rem; font-weight: 600; }
 a.cta-btn:hover { background: var(--gold-strong); color: var(--navy); }
-header.page-head .tagline { margin: 0; font-size: 0.95rem; color: var(--on-navy-muted); line-height: 1.55; max-width: 48em; }
-header.page-head .tagline a { color: var(--on-navy-muted); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; font-weight: 500; }
+header.page-head .tagline {
+  margin: 0; font-size: 0.95rem; color: var(--on-navy-muted); line-height: 1.55;
+  max-width: 48em;
+}
+header.page-head .tagline a {
+  color: var(--on-navy-muted);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
 header.page-head .tagline a:hover { color: var(--gold); }
-.list-search.omni-wrap { position: relative; margin: 14px 0 18px; max-width: 100%; }
-.omni-wrap input { width: 100%; height: 40px; border: 1px solid var(--hairline); background: var(--surface-1); color: var(--ink); border-radius: 10px; padding: 0 14px; font-size: 0.95rem; font-family: inherit; letter-spacing: -0.02em; }
+.list-search.omni-wrap {
+  position: relative; margin: 14px 0 18px; max-width: 100%;
+}
+.omni-wrap input {
+  width: 100%; height: 40px;
+  border: 1px solid var(--hairline);
+  background: var(--surface-1);
+  color: var(--ink);
+  border-radius: 10px;
+  padding: 0 14px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  letter-spacing: -0.02em;
+}
 .omni-wrap input::placeholder { color: var(--text-muted); }
-.omni-wrap input:focus { outline: 2px solid var(--navy); outline-offset: 1px; border-color: transparent; }
+.omni-wrap input:focus {
+  outline: 2px solid var(--navy);
+  outline-offset: 1px;
+  border-color: transparent;
+}
+.omni-results {
+  position: absolute; z-index: 40; left: 0; right: 0; top: calc(100% + 6px);
+  background: var(--surface-1); border: 1px solid var(--hairline); border-radius: 12px;
+  max-height: 420px; overflow: auto;
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--ink) 10%, transparent);
+}
+.omni-results.hidden { display: none; }
 .wrap { max-width: 980px; margin: 0 auto; padding: 18px 20px 48px; }
-.site-footer { background: linear-gradient(165deg, var(--navy) 0%, var(--navy-2) 100%); color: var(--on-navy-muted); }
-.footer-inner { max-width: 980px; margin: 0 auto; padding: 28px 20px 32px; font-size: 0.78rem; text-align: center; line-height: 1.8; }
+.site-footer {
+  background: linear-gradient(165deg, var(--navy) 0%, var(--navy-2) 100%);
+  color: var(--on-navy-muted);
+}
+.footer-inner {
+  max-width: 980px; margin: 0 auto; padding: 28px 20px 32px;
+  font-size: 0.78rem; text-align: center; line-height: 1.8;
+}
 .site-footer a { color: var(--on-navy-muted); }
 .site-footer a:hover { color: var(--gold); }
-
+.org-flag { font-style: normal; font-size: 1.05em; line-height: 1; margin-right: 4px; }
 
 [hidden] { display: none !important; }
 .tiles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin: 4px 0 14px; }
@@ -151,7 +216,9 @@ button.filter-chip[data-f].active { background: color-mix(in srgb, var(--topic) 
 </style>
 </head>
 <body>
-<nav class="global-nav" aria-label="사이트"><div class="global-nav-inner"><div class="global-nav-left"><a href="https://songkyungho.github.io/ai-safety-digest/" target="_blank" rel="noopener noreferrer">AI 안전 다이제스트</a><a href="https://songkyungho.github.io/ai-safety-library/" target="_blank" rel="noopener noreferrer">AI 안전 라이브러리</a><a href="https://songkyungho.github.io/ai-safety-research/" target="_blank" rel="noopener noreferrer">AI 안전 연구</a><a href="https://songkyungho.github.io/ai-safety-glossary/" target="_blank" rel="noopener noreferrer">AI 안전 용어집</a><a class="nav-current" href="index.html">AI 안전 알림판</a></div><div class="global-nav-right"><span class="nav-current">소개</span><a href="about/log.html">업데이트</a></div></div></nav><header class="page-head"><div class="page-head-inner"><div class="title-row"><h1>소개</h1><a class="cta-btn" href="index.html">← AI 안전 알림판</a></div><p class="tagline">무엇을 어디서 모으고 어떻게 분류하는지</p></div></header>
+<div class="viz-root">
+<nav class="global-nav" aria-label="사이트"><div class="global-nav-inner"><div class="global-nav-left"><a href="https://songkyungho.github.io/ai-safety-digest/" target="_blank" rel="noopener noreferrer">AI 안전 다이제스트</a><a href="https://songkyungho.github.io/ai-safety-library/" target="_blank" rel="noopener noreferrer">AI 안전 라이브러리</a><a href="https://songkyungho.github.io/ai-safety-research/" target="_blank" rel="noopener noreferrer">AI 안전 연구</a><a href="https://songkyungho.github.io/ai-safety-glossary/" target="_blank" rel="noopener noreferrer">AI 안전 용어집</a><a class="nav-current" href="index.html">AI 안전 알림판</a></div><div class="global-nav-right"><span class="nav-current">소개</span><a href="about/log.html">업데이트</a></div></div></nav>
+<header class="page-head"><div class="page-head-inner"><div class="title-row"><h1>소개</h1><a class="cta-btn" href="index.html">← AI 안전 알림판</a></div><p class="tagline">무엇을 어디서 모으고 어떻게 분류하는지</p></div></header>
 <main class="wrap">
 <div class="prose">
 <p>AI 안전 분야의 <b>행사·학회·교육(펠로십)·채용·연구 펀딩</b>과, 한국 공공부문의 <b>AI 안전·신뢰성·거버넌스 관련 공고</b>(입찰·사전규격·사업공고)를 한곳에 모아 마감일 순으로 보여 줍니다.
@@ -192,10 +259,12 @@ button.filter-chip[data-f].active { background: color-mix(in srgb, var(--topic) 
 </ul>
 <h2>데이터 출처 표기</h2>
 <p>AISafety.com에서 온 항목은 CC BY 4.0(출처: AISafety.com)을 따릅니다.</p>
-<p class="result-line">마지막 갱신 2026-10-08 23:31</p>
+<p class="result-line">마지막 갱신 2026-10-09 22:56</p>
 </div>
 </main>
-<footer class="site-footer"><div class="footer-inner">만든 사람: 인공지능안전연구소 <a href="https://songkyungho.github.io" target="_blank" rel="noopener">송경호</a> · 문의/오류제보: <a href="mailto:songkyungho@etri.re.kr">songkyungho@etri.re.kr</a><br>데이터 출처: <a href="https://www.aisafety.com" target="_blank" rel="noopener">AISafety.com</a> (CC BY 4.0) · <a href="https://www.data.go.kr" target="_blank" rel="noopener">공공데이터포털</a> 조달청·ALIO OpenAPI · EA Opportunities · 각 기관 게시판·채용 페이지 — 자세한 내용은 소개</div></footer>
+<footer class="site-footer"><div class="footer-inner">만든 사람: 인공지능안전연구소 <a href="https://songkyungho.github.io" target="_blank" rel="noopener">송경호</a> · 문의/오류제보: <a href="mailto:songkyungho@etri.re.kr">songkyungho@etri.re.kr</a><br>
+데이터 출처: <a href="https://www.aisafety.com" target="_blank" rel="noopener">AISafety.com</a> (CC BY 4.0) · <a href="https://www.data.go.kr" target="_blank" rel="noopener">공공데이터포털</a> 조달청·ALIO OpenAPI · EA Opportunities · 각 기관 게시판·채용 페이지 — 자세한 내용은 소개</div></footer>
+</div>
 
 </body>
 </html>
