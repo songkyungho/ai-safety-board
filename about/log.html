@@ -132,6 +132,47 @@ header.page-head .tagline a:hover { color: var(--gold); }
 .org-flag { font-style: normal; font-size: 1.05em; line-height: 1; margin-right: 4px; }
 
 [hidden] { display: none !important; }
+.kb { background: var(--surface-1); border: 1px solid var(--hairline); border-radius: 16px; padding: 14px 16px 12px; margin: 4px 0 10px; }
+.kb-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+.kb-head h2 { font-size: 0.98rem; margin: 0; letter-spacing: -0.02em; }
+.kb-head a { font-size: 0.82rem; white-space: nowrap; }
+.kb-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 14px; }
+.kb-main { border-radius: 12px; padding: 14px 16px; background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%); color: var(--on-navy); display: flex; flex-direction: column; gap: 6px; }
+.kb-main .kb-badge { align-self: flex-start; font-size: 0.75rem; font-weight: 600; padding: 2px 9px; border-radius: 999px; background: var(--gold); color: #2b2210; }
+.kb-main .kb-badge.past { background: rgba(255,255,255,.18); color: var(--on-navy); }
+.kb-main h3 { margin: 2px 0 0; font-size: 1.12rem; line-height: 1.4; letter-spacing: -0.02em; }
+.kb-main h3 a { color: var(--on-navy); text-decoration: none; }
+.kb-main h3 a:hover { color: var(--gold); }
+.kb-main .kb-when { font-size: 0.86rem; color: var(--on-navy-muted); }
+.kb-main .kb-sum { font-size: 0.86rem; color: var(--on-navy-muted); line-height: 1.55; margin: 0; }
+.kb-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.kb-btns a { font-size: 0.8rem; padding: 4px 11px; border-radius: 999px; border: 1px solid rgba(255,255,255,.35); color: var(--on-navy); text-decoration: none; }
+.kb-btns a.primary { background: var(--gold); border-color: var(--gold); color: #2b2210; font-weight: 600; }
+.kb-btns a:hover { border-color: var(--gold); }
+.kb-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.kb-list li { display: grid; grid-template-columns: 5.6em minmax(0, 1fr); gap: 10px; padding: 8px 2px; border-bottom: 1px solid var(--gridline); font-size: 0.88rem; line-height: 1.45; }
+.kb-list li:last-child { border-bottom: 0; }
+.kb-list .d { color: var(--text-muted); font-variant-numeric: tabular-nums; font-size: 0.8rem; padding-top: 1px; }
+.kb-list a { color: var(--ink); text-decoration: none; }
+.kb-list a:hover { color: var(--accent); }
+.kb-list .mat { font-size: 0.72rem; margin-left: 6px; padding: 0 6px; border-radius: 999px; border: 1px solid var(--hairline); color: var(--text-secondary); white-space: nowrap; }
+.kb-list .up { color: var(--accent); font-weight: 600; }
+.sumline { display: flex; flex-wrap: wrap; gap: 6px 8px; margin: 0 0 14px; }
+.sumline button { font: inherit; font-size: 0.82rem; cursor: pointer; border: 1px solid var(--hairline); background: var(--surface-1); color: var(--text-secondary); border-radius: 999px; padding: 4px 11px; }
+.sumline button b { color: var(--ink); font-weight: 650; margin-left: 3px; }
+.sumline button.warn b { color: var(--accent); }
+.sumline button:hover { border-color: var(--navy); }
+.ev-year { font-size: 1.05rem; margin: 26px 0 6px; }
+.ev-row { display: grid; grid-template-columns: 9.5em minmax(0, 1fr); gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--gridline); }
+.ev-row .d { color: var(--text-muted); font-size: 0.86rem; font-variant-numeric: tabular-nums; }
+.ev-row h3 { margin: 0 0 2px; font-size: 1rem; letter-spacing: -0.02em; line-height: 1.45; }
+.ev-row h3 a { color: var(--ink); text-decoration: none; }
+.ev-row h3 a:hover { color: var(--accent); }
+.ev-row .meta { font-size: 0.84rem; color: var(--text-secondary); }
+.ev-row .links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.ev-row .links a { font-size: 0.78rem; padding: 2px 9px; border-radius: 999px; border: 1px solid var(--hairline); text-decoration: none; color: var(--text-secondary); }
+.ev-row .links a.primary { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+@media (max-width: 760px) { .kb-grid { grid-template-columns: 1fr; } .ev-row { grid-template-columns: 1fr; gap: 2px; } }
 .tiles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin: 4px 0 14px; }
 .tile { display: block; text-align: left; font: inherit; cursor: pointer; background: var(--surface-1); border: 1px solid var(--hairline); border-radius: 14px; padding: 12px 14px 11px; color: var(--ink); min-height: 108px; }
 .tile:hover { border-color: #b9ae98; box-shadow: 0 2px 10px rgba(36,48,68,.06); }
@@ -217,10 +258,10 @@ button.filter-chip[data-f].active { background: color-mix(in srgb, var(--topic) 
 </head>
 <body>
 <div class="viz-root">
-<nav class="global-nav" aria-label="사이트"><div class="global-nav-inner"><div class="global-nav-left"><a href="https://songkyungho.github.io/ai-safety-digest/" target="_blank" rel="noopener noreferrer">AI 안전 다이제스트</a><a href="https://songkyungho.github.io/ai-safety-library/" target="_blank" rel="noopener noreferrer">AI 안전 라이브러리</a><a href="https://songkyungho.github.io/ai-safety-research/" target="_blank" rel="noopener noreferrer">AI 안전 연구</a><a href="https://songkyungho.github.io/ai-safety-glossary/" target="_blank" rel="noopener noreferrer">AI 안전 용어집</a><a class="nav-current" href="../index.html">AI 안전 알림판</a></div><div class="global-nav-right"><a href="../about.html">소개</a><span class="nav-current">업데이트</span></div></div></nav>
+<nav class="global-nav" aria-label="사이트"><div class="global-nav-inner"><div class="global-nav-left"><a href="https://songkyungho.github.io/ai-safety-digest/" target="_blank" rel="noopener noreferrer">AI 안전 다이제스트</a><a href="https://songkyungho.github.io/ai-safety-library/" target="_blank" rel="noopener noreferrer">AI 안전 라이브러리</a><a href="https://songkyungho.github.io/ai-safety-research/" target="_blank" rel="noopener noreferrer">AI 안전 연구</a><a href="https://songkyungho.github.io/ai-safety-glossary/" target="_blank" rel="noopener noreferrer">AI 안전 용어집</a><a class="nav-current" href="../index.html">AI 안전 알림판</a></div><div class="global-nav-right"><a href="../kaisi.html">연구소 행사</a><a href="../about.html">소개</a><span class="nav-current">업데이트</span></div></div></nav>
 <header class="page-head"><div class="page-head-inner"><div class="title-row"><h1>업데이트</h1><a class="cta-btn" href="../index.html">← AI 안전 알림판</a></div><p class="tagline">사이트 구조·소스·분류가 바뀐 기록</p></div></header>
 <main class="wrap">
-<div class="prose"><h2>2026-10-06 · 국가R&amp;D 과제 수행기관</h2><ul><li>공공 AI 도입 현황에 &#x27;누가 수행하나&#x27;를 더했습니다: NTIS 국가R&amp;D 과제검색에서 과제명에 AI 관련어가 있는 과제의 수행기관·부처·사업·정부연구비를 모아, 상위 수행기관과 안전·신뢰 관련 과제 목록을 보여 줍니다(주 1회 갱신, 연구자 이름은 싣지 않음).</li><li>&#x27;누가 수주하나&#x27; 표에 국가R&amp;D 열을 더했습니다: 수주 업체가 최근 3년에 수행한 국가R&amp;D 과제 수와 정부연구비(NTIS 수행기관 현황, 기관 프로필로 연결).</li></ul><h2>2026-10-05 · 시리즈 공통 주제</h2><ul><li>분야 표시를 AI 안전 다이제스트·라이브러리와 같은 공통 주제(이모지·리본 색)로 바꿨습니다. 주제 필터, 카드 리본, 공공 AI 도입 현황의 주제 그림·표에 적용했습니다.</li></ul><h2>2026-10-05 · 공공 AI 도입 현황 그래프 다양화</h2><ul><li>월별 계획 금액(선 그래프), 연도별 안전·신뢰 비중(미터), 기관 유형(도넛), 사업 유형 겹침(벤 다이어그램), 안전 분야(트리맵)로 바꿨습니다.</li></ul><h2>2026-10-05 · 연구 지원 공모 보강</h2><ul><li>UK AISI·CIFAR(캐나다 AISI)·ARIA·Frontier Model Forum·Foresight·싱가포르 DTC의 공모와, Anthropic·OpenAI·Google DeepMind의 그랜트·펠로십 공지를 펀딩 탭에 더했습니다.</li></ul><h2>2026-10-04 · 주요 국제 일정</h2><ul><li>행사 탭에 &#x27;주요 국제 일정&#x27;을 더했습니다: AI 정상회의, 유엔 AI 거버넌스 글로벌 대화, G7·G20·APEC, OECD, ITU, REAIM, EU AI법·인공지능기본법 시행 시점 등(공식 확인되지 않은 일정은 &#x27;일정 추정&#x27;).</li><li>Digital Watch의 정부 간 디지털·AI 정책 행사 일정도 함께 보여 줍니다(행사명·날짜·장소만).</li><li>주소를 songkyungho.github.io/ai-safety-board로 옮기고, 요약·장소·태그를 모두 한국어로 바꿨습니다. 상단에 핵심 정보 다섯 칸을 넣었습니다.</li></ul><h2>2026-10-04 · AI 안전 알림판으로</h2><ul><li>이름을 &#x27;AI 안전 알림판&#x27;으로 바꿨습니다.</li><li>학회 탭을 추가했습니다: AI·AI 안전 관련 국제 학회와 국내 학회의 접수 일정.</li><li>인공지능안전연구소(ETRI 공개채용)와 지방공공기관 채용을 함께 모읍니다.</li><li>공공 AI 도입 현황에 &#x27;누가 수주하나&#x27;(계약·낙찰 상위 업체, 안전·신뢰 관련 수주)를 추가하고, 안전·신뢰 관련 사업을 다른 색으로 구분했습니다.</li><li>RSS·JSON·캘린더 피드는 더 제공하지 않습니다.</li></ul><h2>2026-10-04 · 공공 AI 도입 현황</h2><ul><li>나라장터 발주계획(2024~)·사전규격·입찰로 본 한국 공공부문 AI 사업 대시보드를 추가했습니다: 월별 추이, 기관·유형, 안전·신뢰 관련 계획의 비중.</li></ul><h2>2026-10-04 · 처음 공개</h2><ul><li>AI 안전 행사·교육·채용·펀딩(AISafety.com, EA Opportunities, 연구소 채용 페이지)과 국내 AI 안전 관련 공고(나라장터·기관 게시판·ALIO)를 마감일 순으로 모았습니다.</li><li>마감 임박(7일) 목록, 분야(위험 R·거버넌스 G)·참여(한국·온라인·아시아) 필터, 검색을 넣었습니다.</li><li>RSS·JSON·마감 캘린더(ICS) 피드를 엽니다.</li></ul></div>
+<div class="prose"><h2>2026-10-29 · 인공지능안전연구소 행사</h2><ul><li>첫 화면 맨 위에 인공지능안전연구소 행사 배너를 두었습니다. 다가오는 행사(없으면 가장 최근 행사)를 크게, 최근 행사 4개를 옆에 보여 주고 자료집이 있으면 바로 열 수 있습니다.</li><li>지난 행사까지 연도별로 모은 &#x27;연구소 행사&#x27; 페이지를 더했습니다. 연구소 홈페이지 소식 게시판의 안내·개최 결과·자료집 글을 행사별로 묶습니다.</li><li>다섯 칸 요약(이번 주 마감·열린 펀딩·국내 공고·학회·최근 7일)은 배너 아래 한 줄로 줄였습니다.</li></ul><h2>2026-10-06 · 국가R&amp;D 과제 수행기관</h2><ul><li>공공 AI 도입 현황에 &#x27;누가 수행하나&#x27;를 더했습니다: NTIS 국가R&amp;D 과제검색에서 과제명에 AI 관련어가 있는 과제의 수행기관·부처·사업·정부연구비를 모아, 상위 수행기관과 안전·신뢰 관련 과제 목록을 보여 줍니다(주 1회 갱신, 연구자 이름은 싣지 않음).</li><li>&#x27;누가 수주하나&#x27; 표에 국가R&amp;D 열을 더했습니다: 수주 업체가 최근 3년에 수행한 국가R&amp;D 과제 수와 정부연구비(NTIS 수행기관 현황, 기관 프로필로 연결).</li></ul><h2>2026-10-05 · 시리즈 공통 주제</h2><ul><li>분야 표시를 AI 안전 다이제스트·라이브러리와 같은 공통 주제(이모지·리본 색)로 바꿨습니다. 주제 필터, 카드 리본, 공공 AI 도입 현황의 주제 그림·표에 적용했습니다.</li></ul><h2>2026-10-05 · 공공 AI 도입 현황 그래프 다양화</h2><ul><li>월별 계획 금액(선 그래프), 연도별 안전·신뢰 비중(미터), 기관 유형(도넛), 사업 유형 겹침(벤 다이어그램), 안전 분야(트리맵)로 바꿨습니다.</li></ul><h2>2026-10-05 · 연구 지원 공모 보강</h2><ul><li>UK AISI·CIFAR(캐나다 AISI)·ARIA·Frontier Model Forum·Foresight·싱가포르 DTC의 공모와, Anthropic·OpenAI·Google DeepMind의 그랜트·펠로십 공지를 펀딩 탭에 더했습니다.</li></ul><h2>2026-10-04 · 주요 국제 일정</h2><ul><li>행사 탭에 &#x27;주요 국제 일정&#x27;을 더했습니다: AI 정상회의, 유엔 AI 거버넌스 글로벌 대화, G7·G20·APEC, OECD, ITU, REAIM, EU AI법·인공지능기본법 시행 시점 등(공식 확인되지 않은 일정은 &#x27;일정 추정&#x27;).</li><li>Digital Watch의 정부 간 디지털·AI 정책 행사 일정도 함께 보여 줍니다(행사명·날짜·장소만).</li><li>주소를 songkyungho.github.io/ai-safety-board로 옮기고, 요약·장소·태그를 모두 한국어로 바꿨습니다. 상단에 핵심 정보 다섯 칸을 넣었습니다.</li></ul><h2>2026-10-04 · AI 안전 알림판으로</h2><ul><li>이름을 &#x27;AI 안전 알림판&#x27;으로 바꿨습니다.</li><li>학회 탭을 추가했습니다: AI·AI 안전 관련 국제 학회와 국내 학회의 접수 일정.</li><li>인공지능안전연구소(ETRI 공개채용)와 지방공공기관 채용을 함께 모읍니다.</li><li>공공 AI 도입 현황에 &#x27;누가 수주하나&#x27;(계약·낙찰 상위 업체, 안전·신뢰 관련 수주)를 추가하고, 안전·신뢰 관련 사업을 다른 색으로 구분했습니다.</li><li>RSS·JSON·캘린더 피드는 더 제공하지 않습니다.</li></ul><h2>2026-10-04 · 공공 AI 도입 현황</h2><ul><li>나라장터 발주계획(2024~)·사전규격·입찰로 본 한국 공공부문 AI 사업 대시보드를 추가했습니다: 월별 추이, 기관·유형, 안전·신뢰 관련 계획의 비중.</li></ul><h2>2026-10-04 · 처음 공개</h2><ul><li>AI 안전 행사·교육·채용·펀딩(AISafety.com, EA Opportunities, 연구소 채용 페이지)과 국내 AI 안전 관련 공고(나라장터·기관 게시판·ALIO)를 마감일 순으로 모았습니다.</li><li>마감 임박(7일) 목록, 분야(위험 R·거버넌스 G)·참여(한국·온라인·아시아) 필터, 검색을 넣었습니다.</li><li>RSS·JSON·마감 캘린더(ICS) 피드를 엽니다.</li></ul></div>
 </main>
 <footer class="site-footer"><div class="footer-inner">만든 사람: 인공지능안전연구소 <a href="https://songkyungho.github.io" target="_blank" rel="noopener">송경호</a> · 문의/오류제보: <a href="mailto:songkyungho@etri.re.kr">songkyungho@etri.re.kr</a><br>
 데이터 출처: <a href="https://www.aisafety.com" target="_blank" rel="noopener">AISafety.com</a> (CC BY 4.0) · <a href="https://www.data.go.kr" target="_blank" rel="noopener">공공데이터포털</a> 조달청·ALIO OpenAPI · EA Opportunities · 각 기관 게시판·채용 페이지 — 자세한 내용은 소개</div></footer>

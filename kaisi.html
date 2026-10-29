@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>인공지능안전연구소 행사 · AI 안전 알림판</title>
+<meta name="description" content="인공지능안전연구소가 열거나 함께 연 세미나·워크숍·포럼 — 지난 행사 포함">
+<meta property="og:title" content="인공지능안전연구소 행사 · AI 안전 알림판">
+<meta property="og:description" content="인공지능안전연구소가 열거나 함께 연 세미나·워크숍·포럼 — 지난 행사 포함">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://songkyungho.github.io/ai-safety-board/kaisi.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23f4f2eb'/><circle cx='16' cy='12' r='6' fill='%230f766e'/><rect x='14.6' y='16' width='2.8' height='10' rx='1.4' fill='%230f766e'/></svg>">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  color-scheme: light;
+  --ink: #243044; --ink-muted: #3a4658; --text-muted: #5c6670;
+  --text-primary: #243044; --text-secondary: #3a4658;
+  --plane: #f4f2eb; --surface-1: #fffcf6; --surface-2: #f7f4ec; --surface-pearl: #fffcf6;
+  --hairline: #ddd6c8; --border: #ddd6c8; --gridline: #ebe6da; --baseline: #ddd6c8;
+  --accent: #c45c48; --accent-focus: #5e4a2a;
+  --navy: #5e4a2a; --navy-2: #73603a; --gold: #e0a84a; --gold-strong: #ebba62;
+  --on-navy: #f4f2eb; --on-navy-muted: #e2d8c4; --sage: #3f5340; --on-dark: #f4f2eb;
+}
+
+* { box-sizing: border-box; }
+html { font-size: 16px; overflow-x: clip; }
+body {
+  margin: 0;
+  background: var(--plane);
+  color: var(--ink);
+  font-family: "IBM Plex Sans KR", "IBM Plex Sans", -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: clip;
+}
+a { color: var(--sage); }
+a:hover { color: var(--accent); }
+.viz-root { min-height: 100vh; background: var(--plane); color: var(--ink); overflow-x: clip; }
+.global-nav {
+  position: sticky; top: 0; z-index: 40;
+  background: var(--navy); color: var(--on-navy); height: 40px;
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+}
+.global-nav-inner {
+  max-width: 980px; margin: 0 auto; height: 40px; padding: 0 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  font-size: 0.78rem; font-weight: 500; letter-spacing: -0.02em;
+  min-width: 0; width: 100%;
+}
+.global-nav-left, .global-nav-right {
+  display: flex; align-items: center; gap: 16px; flex-shrink: 0;
+}
+.global-nav a, .global-nav .nav-current {
+  color: var(--on-navy); text-decoration: none; white-space: nowrap;
+}
+.global-nav a { opacity: 0.78; }
+.global-nav a:hover { opacity: 1; color: var(--gold); }
+.global-nav .nav-current { opacity: 1; font-weight: 650; }
+header.page-head {
+  background: linear-gradient(165deg, var(--navy) 0%, var(--navy-2) 100%);
+  color: var(--on-navy);
+}
+.page-head-inner {
+  max-width: 980px; margin: 0 auto; padding: 30px 20px 22px;
+}
+header.page-head h1 {
+  font-size: 1.6rem; margin: 0 0 4px; font-weight: 700; letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+header.page-head .title-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin: 0 0 4px; }
+header.page-head .title-row h1 { margin: 0; }
+a.cta-btn { display: inline-block; background: var(--gold); color: var(--navy); text-decoration: none;
+  padding: 2px 10px; border-radius: 999px; font-size: 0.82rem; font-weight: 600; }
+a.cta-btn:hover { background: var(--gold-strong); color: var(--navy); }
+header.page-head .tagline {
+  margin: 0; font-size: 0.95rem; color: var(--on-navy-muted); line-height: 1.55;
+  max-width: 48em;
+}
+header.page-head .tagline a {
+  color: var(--on-navy-muted);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+header.page-head .tagline a:hover { color: var(--gold); }
+.list-search.omni-wrap {
+  position: relative; margin: 14px 0 18px; max-width: 100%;
+}
+.omni-wrap input {
+  width: 100%; height: 40px;
+  border: 1px solid var(--hairline);
+  background: var(--surface-1);
+  color: var(--ink);
+  border-radius: 10px;
+  padding: 0 14px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  letter-spacing: -0.02em;
+}
+.omni-wrap input::placeholder { color: var(--text-muted); }
+.omni-wrap input:focus {
+  outline: 2px solid var(--navy);
+  outline-offset: 1px;
+  border-color: transparent;
+}
+.omni-results {
+  position: absolute; z-index: 40; left: 0; right: 0; top: calc(100% + 6px);
+  background: var(--surface-1); border: 1px solid var(--hairline); border-radius: 12px;
+  max-height: 420px; overflow: auto;
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--ink) 10%, transparent);
+}
+.omni-results.hidden { display: none; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 18px 20px 48px; }
+.site-footer {
+  background: linear-gradient(165deg, var(--navy) 0%, var(--navy-2) 100%);
+  color: var(--on-navy-muted);
+}
+.footer-inner {
+  max-width: 980px; margin: 0 auto; padding: 28px 20px 32px;
+  font-size: 0.78rem; text-align: center; line-height: 1.8;
+}
+.site-footer a { color: var(--on-navy-muted); }
+.site-footer a:hover { color: var(--gold); }
+.org-flag { font-style: normal; font-size: 1.05em; line-height: 1; margin-right: 4px; }
+
+[hidden] { display: none !important; }
+.kb { background: var(--surface-1); border: 1px solid var(--hairline); border-radius: 16px; padding: 14px 16px 12px; margin: 4px 0 10px; }
+.kb-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+.kb-head h2 { font-size: 0.98rem; margin: 0; letter-spacing: -0.02em; }
+.kb-head a { font-size: 0.82rem; white-space: nowrap; }
+.kb-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 14px; }
+.kb-main { border-radius: 12px; padding: 14px 16px; background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%); color: var(--on-navy); display: flex; flex-direction: column; gap: 6px; }
+.kb-main .kb-badge { align-self: flex-start; font-size: 0.75rem; font-weight: 600; padding: 2px 9px; border-radius: 999px; background: var(--gold); color: #2b2210; }
+.kb-main .kb-badge.past { background: rgba(255,255,255,.18); color: var(--on-navy); }
+.kb-main h3 { margin: 2px 0 0; font-size: 1.12rem; line-height: 1.4; letter-spacing: -0.02em; }
+.kb-main h3 a { color: var(--on-navy); text-decoration: none; }
+.kb-main h3 a:hover { color: var(--gold); }
+.kb-main .kb-when { font-size: 0.86rem; color: var(--on-navy-muted); }
+.kb-main .kb-sum { font-size: 0.86rem; color: var(--on-navy-muted); line-height: 1.55; margin: 0; }
+.kb-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.kb-btns a { font-size: 0.8rem; padding: 4px 11px; border-radius: 999px; border: 1px solid rgba(255,255,255,.35); color: var(--on-navy); text-decoration: none; }
+.kb-btns a.primary { background: var(--gold); border-color: var(--gold); color: #2b2210; font-weight: 600; }
+.kb-btns a:hover { border-color: var(--gold); }
+.kb-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.kb-list li { display: grid; grid-template-columns: 5.6em minmax(0, 1fr); gap: 10px; padding: 8px 2px; border-bottom: 1px solid var(--gridline); font-size: 0.88rem; line-height: 1.45; }
+.kb-list li:last-child { border-bottom: 0; }
+.kb-list .d { color: var(--text-muted); font-variant-numeric: tabular-nums; font-size: 0.8rem; padding-top: 1px; }
+.kb-list a { color: var(--ink); text-decoration: none; }
+.kb-list a:hover { color: var(--accent); }
+.kb-list .mat { font-size: 0.72rem; margin-left: 6px; padding: 0 6px; border-radius: 999px; border: 1px solid var(--hairline); color: var(--text-secondary); white-space: nowrap; }
+.kb-list .up { color: var(--accent); font-weight: 600; }
+.sumline { display: flex; flex-wrap: wrap; gap: 6px 8px; margin: 0 0 14px; }
+.sumline button { font: inherit; font-size: 0.82rem; cursor: pointer; border: 1px solid var(--hairline); background: var(--surface-1); color: var(--text-secondary); border-radius: 999px; padding: 4px 11px; }
+.sumline button b { color: var(--ink); font-weight: 650; margin-left: 3px; }
+.sumline button.warn b { color: var(--accent); }
+.sumline button:hover { border-color: var(--navy); }
+.ev-year { font-size: 1.05rem; margin: 26px 0 6px; }
+.ev-row { display: grid; grid-template-columns: 9.5em minmax(0, 1fr); gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--gridline); }
+.ev-row .d { color: var(--text-muted); font-size: 0.86rem; font-variant-numeric: tabular-nums; }
+.ev-row h3 { margin: 0 0 2px; font-size: 1rem; letter-spacing: -0.02em; line-height: 1.45; }
+.ev-row h3 a { color: var(--ink); text-decoration: none; }
+.ev-row h3 a:hover { color: var(--accent); }
+.ev-row .meta { font-size: 0.84rem; color: var(--text-secondary); }
+.ev-row .links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.ev-row .links a { font-size: 0.78rem; padding: 2px 9px; border-radius: 999px; border: 1px solid var(--hairline); text-decoration: none; color: var(--text-secondary); }
+.ev-row .links a.primary { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+@media (max-width: 760px) { .kb-grid { grid-template-columns: 1fr; } .ev-row { grid-template-columns: 1fr; gap: 2px; } }
+.tiles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin: 4px 0 14px; }
+.tile { display: block; text-align: left; font: inherit; cursor: pointer; background: var(--surface-1); border: 1px solid var(--hairline); border-radius: 14px; padding: 12px 14px 11px; color: var(--ink); min-height: 108px; }
+.tile:hover { border-color: #b9ae98; box-shadow: 0 2px 10px rgba(36,48,68,.06); }
+.tile .t-l { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+.tile .t-v { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 30px; font-weight: 600; letter-spacing: -.5px; margin: 4px 0 2px; }
+.tile .t-v > span { white-space: nowrap; }
+.tile .t-v small { font-size: 14px; font-weight: 500; color: var(--text-muted); margin-left: 3px; }
+.tile .t-s { font-size: 12px; color: var(--text-secondary); line-height: 1.45; }
+.tile .spark { flex: 0 1 96px; width: 96px; height: 28px; }
+.tile.warn { border-color: #ecd3a8; background: #fbf4e8; } .tile.warn .t-s { color: #8a5a18; }
+@media (max-width: 980px) { .tiles { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px) { .tiles { grid-template-columns: repeat(2, 1fr); } .tile .t-v { font-size: 24px; } }
+.urgent { background: var(--surface-1); border: 1px solid var(--hairline); border-left: 4px solid var(--accent); border-radius: 12px; padding: 12px 16px; margin: 0 0 18px; }
+.urgent h2 { font-size: 0.95rem; margin: 0 0 6px; letter-spacing: -0.02em; }
+.urgent h2 .muted { font-weight: 400; color: var(--text-muted); margin-left: 4px; }
+.urgent ol { list-style: none; margin: 0; padding: 0; }
+.urgent li { display: flex; gap: 10px; align-items: baseline; padding: 3px 0; font-size: 0.92rem; line-height: 1.45; }
+.urgent li a { color: var(--ink); text-decoration: none; }
+.urgent li a:hover { color: var(--accent); text-decoration: underline; }
+.dday { flex: 0 0 auto; font-variant-numeric: tabular-nums; font-weight: 700; font-size: 0.75rem; border-radius: 6px; padding: 1px 6px; color: var(--text-secondary); border: 1px solid var(--hairline); background: var(--surface-2); }
+.dday.hot { color: #fff; background: var(--accent); border-color: var(--accent); }
+.dday.warm { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, var(--hairline)); background: color-mix(in srgb, var(--accent) 8%, var(--surface-1)); }
+.tabs { display: flex; gap: 4px; flex-wrap: wrap; border-bottom: 2px solid var(--hairline); margin: 4px 0 12px; }
+.tabs button { font: inherit; font-size: 0.92rem; background: none; border: 0; padding: 8px 12px; margin-bottom: -2px; cursor: pointer; color: var(--text-secondary); border-bottom: 2px solid transparent; letter-spacing: -0.02em; }
+.tabs button .n { font-size: 0.75rem; color: var(--text-muted); margin-left: 3px; font-variant-numeric: tabular-nums; }
+.tabs button.active { color: var(--navy); border-bottom-color: var(--navy); font-weight: 700; }
+#listControls { margin: 0 0 4px; }
+.filter-toolbar { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--hairline); }
+.filter-toolbar:last-child { border-bottom: 0; }
+.filter-label { flex: 0 0 auto; min-width: 2.4em; margin-right: 4px; font-size: 0.75rem; font-weight: 700; color: var(--text-muted); white-space: nowrap; }
+button.filter-chip { display: inline-flex; align-items: center; gap: 5px; border: 1px solid var(--hairline); background: transparent; color: var(--text-secondary); border-radius: 999px; padding: 3px 10px; font: inherit; font-size: 0.75rem; line-height: 1.35; cursor: pointer; white-space: nowrap; }
+button.filter-chip:hover { color: var(--ink); border-color: var(--text-muted); }
+button.filter-chip .n { font-variant-numeric: tabular-nums; color: var(--text-muted); }
+button.filter-chip.active { border-color: var(--navy); color: var(--navy); font-weight: 600; background: color-mix(in srgb, var(--gold) 22%, var(--surface-1)); }
+button.filter-more { border: 1px dashed var(--hairline); background: transparent; color: var(--text-muted); border-radius: 999px; padding: 3px 10px; font: inherit; font-size: 0.75rem; cursor: pointer; }
+.result-line { font-size: 0.8rem; color: var(--text-muted); margin: 0 0 6px; display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.result-line button { font: inherit; font-size: 0.8rem; background: none; border: 0; color: var(--sage); cursor: pointer; text-decoration: underline; padding: 0; }
+.group-label { font-weight: 600; font-size: 1.05rem; letter-spacing: -0.37px; padding: 10px 0 6px; color: var(--ink); }
+.group-label .muted { font-weight: 400; color: var(--text-muted); margin-left: 4px; }
+details.closed-group summary { cursor: pointer; font-weight: 600; font-size: 1.05rem; padding: 10px 0 6px; list-style: none; border-top: 1px solid var(--hairline); margin-top: 8px; }
+details.closed-group summary::before { content: "▸ "; color: var(--text-muted); font-weight: 400; }
+details.closed-group[open] summary::before { content: "▾ "; }
+.card { background: var(--surface-1); border: 1px solid var(--hairline); border-left: 4px solid var(--chip, var(--hairline)); border-radius: 14px; padding: 14px 18px; margin-bottom: 10px; scroll-margin-top: 56px; }
+.card.is-closed { opacity: 0.72; }
+.card-head { display: flex; align-items: flex-start; gap: 8px; font-size: 0.75rem; color: var(--text-muted); }
+.head-tags { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; flex: 1; min-width: 0; }
+.copy-btn { flex-shrink: 0; margin-left: auto; border: 1px solid var(--hairline); background: transparent; color: var(--text-muted); border-radius: 999px; padding: 3px 12px; font: inherit; font-size: 0.75rem; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.copy-btn:hover, .copy-btn:active { color: var(--sage); border-color: var(--sage); }
+.copy-btn.copied { color: #15803d; border-color: #15803d; }
+.kind-badge { white-space: nowrap; flex: 0 0 auto; font-size: 0.75rem; font-weight: 600; border-radius: 999px; padding: 1px 8px; background: color-mix(in srgb, var(--chip) 13%, var(--surface-1)); color: var(--chip); border: 1px solid color-mix(in srgb, var(--chip) 32%, var(--hairline)); }
+.k-event { --chip: #c2410c; } .k-conference { --chip: #7c3aed; } .k-training { --chip: #0f766e; } .k-job { --chip: #474284; } .k-funding { --chip: #be123c; } .k-call { --chip: #1d4ed8; }
+.tabs button[data-type]::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--chip, transparent); margin-right: 6px; vertical-align: 1px; }
+.tabs button[data-type="all"]::before { display: none; }
+.tabs button.active { color: var(--chip, var(--navy)); border-bottom-color: var(--chip, var(--navy)); }
+.kr-badge { font-weight: 600; color: #1d4ed8; }
+.major-badge { font-weight: 700; color: #0f766e; border: 1px solid color-mix(in srgb, #0f766e 35%, var(--hairline)); background: color-mix(in srgb, #0f766e 9%, var(--surface-1)); border-radius: 999px; padding: 0 7px; }
+.status-tag { border-radius: 6px; padding: 0 6px; border: 1px solid var(--hairline); }
+.card h3 { margin: 6px 0 2px; font-size: 1.05rem; line-height: 1.45; letter-spacing: -0.37px; font-weight: 700; }
+.card h3 a { color: #1d4ed8; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.card h3 a:hover { color: #1e40af; }
+.orig { font-size: 0.85rem; color: var(--text-muted); margin: 0 0 2px; }
+.ribbon-row { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; align-items: center; }
+.kw-tag.award { color: #15803d; border-color: color-mix(in srgb, #15803d 35%, var(--hairline)); background: color-mix(in srgb, #15803d 9%, var(--surface-1)); font-weight: 600; }
+.kw-tag { display: inline-flex; border: 1px solid var(--hairline); border-radius: 999px; padding: 1px 8px; font-size: 0.72rem; color: var(--text-secondary); background: var(--surface-2); }
+.topic-tag { display: inline-flex; border-radius: 999px; padding: 1px 8px; font-size: 0.72rem; font-weight: 600; color: var(--topic, var(--navy)); border: 1px solid color-mix(in srgb, var(--topic, var(--navy)) 35%, var(--hairline)); background: color-mix(in srgb, var(--topic, var(--navy)) 11%, var(--surface-1)); cursor: pointer; }
+button.filter-chip[data-f] { color: var(--topic); border-color: color-mix(in srgb, var(--topic) 30%, var(--hairline)); }
+button.filter-chip[data-f].active { background: color-mix(in srgb, var(--topic) 16%, var(--surface-1)); border-color: var(--topic); color: var(--topic); }
+.card-summary { margin: 8px 0 0; font-size: 0.92rem; line-height: 1.55; color: var(--text-secondary); }
+.card-actions { margin-top: 8px; display: flex; gap: 12px; font-size: 0.75rem; flex-wrap: wrap; }
+.card-actions button, .card-actions a { font: inherit; background: none; border: 0; padding: 0; color: var(--text-muted); cursor: pointer; text-decoration: none; }
+.card-actions button:hover, .card-actions a:hover { color: var(--accent); }
+.more-btn { display: block; margin: 8px auto 0; font: inherit; font-size: 0.85rem; padding: 6px 16px; border-radius: 999px; border: 1px solid var(--hairline); background: var(--surface-1); cursor: pointer; color: var(--text-secondary); }
+.empty { color: var(--text-muted); padding: 24px 0; text-align: center; }
+.prose h2 { font-size: 1.15rem; margin: 28px 0 8px; letter-spacing: -0.02em; }
+.prose p, .prose li { color: var(--text-secondary); }
+.prose table { border-collapse: collapse; width: 100%; font-size: 0.88rem; margin: 8px 0 16px; }
+.prose th, .prose td { border-bottom: 1px solid var(--hairline); text-align: left; padding: 6px 8px; vertical-align: top; }
+.prose th { color: var(--text-muted); font-weight: 600; }
+.prose code { background: var(--surface-2); border: 1px solid var(--hairline); border-radius: 4px; padding: 0 4px; font-size: 0.85em; }
+@media (max-width: 640px) { .tabs button { padding: 7px 8px; font-size: 0.85rem; } .card { padding: 12px 14px; } }
+
+</style>
+</head>
+<body>
+<div class="viz-root">
+<nav class="global-nav" aria-label="사이트"><div class="global-nav-inner"><div class="global-nav-left"><a href="https://songkyungho.github.io/ai-safety-digest/" target="_blank" rel="noopener noreferrer">AI 안전 다이제스트</a><a href="https://songkyungho.github.io/ai-safety-library/" target="_blank" rel="noopener noreferrer">AI 안전 라이브러리</a><a href="https://songkyungho.github.io/ai-safety-research/" target="_blank" rel="noopener noreferrer">AI 안전 연구</a><a href="https://songkyungho.github.io/ai-safety-glossary/" target="_blank" rel="noopener noreferrer">AI 안전 용어집</a><a class="nav-current" href="index.html">AI 안전 알림판</a></div><div class="global-nav-right"><span class="nav-current">연구소 행사</span><a href="about.html">소개</a><a href="about/log.html">업데이트</a></div></div></nav>
+<header class="page-head"><div class="page-head-inner"><div class="title-row"><h1>인공지능안전연구소 행사</h1><a class="cta-btn" href="index.html">← AI 안전 알림판</a></div><p class="tagline">인공지능안전연구소가 열거나 함께 연 세미나·워크숍·포럼 (지난 행사 포함)</p></div></header>
+<main class="wrap">
+<p class="result-line"><span>인공지능안전연구소 홈페이지 <a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5" target="_blank" rel="noopener">소식</a> 게시판의 행사 글을 행사별로 묶었습니다. 매일 밤 갱신됩니다.</span></p><h2 class="ev-year">2026년</h2><div class="ev-row"><div class="d">2026. 10.23.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/127" target="_blank" rel="noopener">제6차 AI 안전 정책 연구 세미나 「2026 AI Safety Policy Global Workshop」</a></h3><div class="meta">서울 신라호텔 라일락 3F· 온라인 병행</div><div class="meta">AI 안전 프레임워크의 실제 적용과 위험관리·정책 대응 방안을 국내외 전문가들과 논의하는 세미나</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/127" target="_blank" rel="noopener">안내</a></div></div></div><div class="ev-row"><div class="d">2026. 10.8. ~ 10.9.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/128" target="_blank" rel="noopener">한·일 AISI 첫 공동 기술 워크숍</a></h3><div class="meta">일본 도쿄</div><div class="meta">한·일 AI 안전 연구자와 기술자들이 다국어·다문화 평가, AI 보안과 사이버 역량을 논의한 공동 워크숍</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/128" target="_blank" rel="noopener">개최 결과</a></div></div></div><div class="ev-row"><div class="d">2026. 9.21.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/120" target="_blank" rel="noopener">제5차 AI 안전 정책 연구 세미나 「AI 위험의 식별과 모니터링」</a></h3><div class="meta">온라인(Zoom)</div><div class="meta">AI 위험 모니터링·분석 연구와 AI 안전 정책 연구의 현황 및 향후 협력 방향을 논의하는 세미나</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/120" target="_blank" rel="noopener">안내</a></div></div></div><div class="ev-row"><div class="d">2026. 9.14. ~ 9.27.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/122" target="_blank" rel="noopener">2026 AI 안전 지킴이 모집 (생성형 AI 위험·오류 사례 발굴 프로젝트)</a></h3><div class="meta">온라인</div><div class="meta">국민이 생성형 AI의 환각·편향·보안 취약점 등 위험과 오류 사례를 발굴·제보하는 참여형 프로젝트</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/122" target="_blank" rel="noopener">모집 안내</a></div></div></div><div class="ev-row"><div class="d">2026. 8.12.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/118" target="_blank" rel="noopener">제4차 AI 안전 정책 연구 세미나 「Agentic AI와 AI 안전 연구」</a></h3><div class="meta">온라인(Zoom)</div><div class="meta">Agentic AI의 기만적 책략과 통제 상실, 신뢰할 수 있는 AI 에이전트의 식별 체계를 논의하는 세미나</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/118" target="_blank" rel="noopener">안내</a><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/125" target="_blank" rel="noopener">자료집</a></div></div></div><div class="ev-row"><div class="d">2026. 7.7. ~ 7.8.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/110" target="_blank" rel="noopener">제2회 인공지능안전 서울 포럼(SFASS)</a></h3><div class="meta">오크우드 코엑스센터 2F, 서울 강남구</div><div class="meta">AI 안전·보안과 관련 표준화 협력 방향을 국내외 관계자들과 논의하는 포럼이다.</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/110" target="_blank" rel="noopener">안내</a></div></div></div><div class="ev-row"><div class="d">2026. 7.6.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/109" target="_blank" rel="noopener">제3차 AI 안전 정책 연구 세미나 「LLM 안전성 벤치마크의 한국 맥락화」</a></h3><div class="meta">판교 인공지능안전연구소 대회의실 · 온라인 병행</div><div class="meta">한국 맥락에 맞는 LLM 안전성 벤치마크와 문화·다중양식 평가 방안을 논의한다.</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/109" target="_blank" rel="noopener">안내</a><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/117" target="_blank" rel="noopener">자료집</a></div></div></div><div class="ev-row"><div class="d">2026. 6.23.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/104" target="_blank" rel="noopener">제2차 AI 안전 정책 연구 세미나 「AI 안전·안보 정책 연구」</a></h3><div class="meta">서울 양재역 인근 엘타워 비바체홀</div><div class="meta">AI 안전관리와 위험 대응, 국가안보 관점의 AI 정책 발전 방향을 논의한다.</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/104" target="_blank" rel="noopener">안내</a><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/116" target="_blank" rel="noopener">자료집</a></div></div></div><div class="ev-row"><div class="d">2026. 5.19.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/99" target="_blank" rel="noopener">제1차 AI 안전 정책 연구 세미나 「AI 위험 연구의 방법론적 접근」</a></h3><div class="meta">온라인(Zoom)</div><div class="meta">AI 위험 모델링과 시나리오 기반 정책 개발 등 AI 안전 연구 방법론을 다룬다.</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/99" target="_blank" rel="noopener">안내</a><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/112" target="_blank" rel="noopener">자료집</a></div></div></div><div class="ev-row"><div class="d">2026. 4.1.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/96" target="_blank" rel="noopener">AI 안전 국민공감 토크 콘서트</a></h3><div class="meta">서울 GB가빈아트홀</div><div class="meta">AI 안전에 대한 국민의 이해와 공감대 형성을 위해 마련한 토크 콘서트다.</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/96" target="_blank" rel="noopener">안내</a></div></div></div><div class="ev-row"><div class="d">2026. 2.25. ~ 2.27.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/92" target="_blank" rel="noopener">AI Security Workshop</a></h3><div class="meta">AI 시스템의 안전·보안·국가안보 위험 관리와 기업 맞춤형 적용 방안을 논의했다.</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/92" target="_blank" rel="noopener">개최 결과</a></div></div></div><div class="ev-row"><div class="d">2026. 1.26. ~ 1.29.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/89" target="_blank" rel="noopener">CBRN AI 안보 기술 교류</a></h3><div class="meta">판교 인공지능안전연구소</div><div class="meta">CBRN 분야 AI 위험과 위협을 평가하고 안보 협력 및 대응 역량 강화 방안을 논의했다.</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/89" target="_blank" rel="noopener">개최 결과</a></div></div></div><h2 class="ev-year">2025년</h2><div class="ev-row"><div class="d">2025. 12.22. ~ 1.21.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/85" target="_blank" rel="noopener">정보 오류 없는 찐 인공지능 경연대회(AI 챌린지)</a></h3><div class="meta">국민이 생성형 AI의 정보 오류를 바로잡고 안전한 활용에 참여하는 AI 경연 캠페인이다.</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/85" target="_blank" rel="noopener">모집 안내</a></div></div></div><div class="ev-row"><div class="d">2025. 12.1.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/84" target="_blank" rel="noopener">EU AI Act Code of Practice 웨비나</a></h3><div class="meta">온라인</div><div class="meta">EU AI Office 전문가가 EU AI Act와 실천강령의 주요 내용 및 규제 시사점을 설명한다.</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/84" target="_blank" rel="noopener">안내</a></div></div></div><div class="ev-row"><div class="d">2025. 10.28. ~ 10.29.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/75" target="_blank" rel="noopener">인공지능안전서울포럼(SFASS)</a></h3><div class="meta">해외 연구소, AI 기업과 평가 기관이 참여해 AI 위험 관리와 평가 방법론을 논의한다.</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/75" target="_blank" rel="noopener">안내</a><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/77" target="_blank" rel="noopener">개최 결과</a></div></div></div><div class="ev-row"><div class="d">2025. 10.23. ~ 10.23.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/76" target="_blank" rel="noopener">AI 안전 생태계 조성을 위한 전문가 간담회</a></h3><div class="meta">성남 인공지능안전연구소</div><div class="meta">AI 안전 기술을 점검하고 국가 AI 안전 생태계 조성 계획의 추진 방향을 논의했다.</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/76" target="_blank" rel="noopener">개최 결과</a></div></div></div><div class="ev-row"><div class="d">2025. 10.1.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/72" target="_blank" rel="noopener">AI안전컨소시엄 합동회의</a></h3><div class="meta">서울 그랜드 인터컨티넨탈 서울 파르나스</div><div class="meta">24개 기업·기관이 AI안전컨소시엄 운영 체계와 정책·평가·연구 협력 방안을 확정했다.</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/72" target="_blank" rel="noopener">개최 결과</a></div></div></div><div class="ev-row"><div class="d">2025. 9.24.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/71" target="_blank" rel="noopener">2025 AI 연구기관 성과공유 심포지엄</a></h3><div class="meta">서울 양재동 엘타워</div><div class="meta">AI 연구기관들이 연구 성과를 공유하고 AI 안전과 거버넌스 협력 방안을 논의했다.</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/71" target="_blank" rel="noopener">개최 결과</a></div></div></div><div class="ev-row"><div class="d">2025. 8.25. ~ 8.28.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/70" target="_blank" rel="noopener">CBRN AI 안보 리스크 국제 워크숍</a></h3><div class="meta">미국 캘리포니아주 리버모어</div><div class="meta">CBRN 분야 AI 오남용 위험과 안전성 평가, 레드팀, 국제 대응 협력을 논의했다.</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/70" target="_blank" rel="noopener">개최 결과</a></div></div></div><div class="ev-row"><div class="d">2025. 4.22.</div><div><h3><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/63" target="_blank" rel="noopener">AI안전컨소시엄 정책·평가 분과 첫 회의</a></h3><div class="meta">온라인</div><div class="meta">AI안전컨소시엄 정책·평가 분과의 활동 방향과 우선 논의 의제를 공유했다.</div><div class="links"><a href="https://www.aisi.re.kr/kor/article/ATCL75b4fb0a5/63" target="_blank" rel="noopener">개최 결과</a></div></div></div>
+</main>
+<footer class="site-footer"><div class="footer-inner">만든 사람: 인공지능안전연구소 <a href="https://songkyungho.github.io" target="_blank" rel="noopener">송경호</a> · 문의/오류제보: <a href="mailto:songkyungho@etri.re.kr">songkyungho@etri.re.kr</a><br>
+데이터 출처: <a href="https://www.aisafety.com" target="_blank" rel="noopener">AISafety.com</a> (CC BY 4.0) · <a href="https://www.data.go.kr" target="_blank" rel="noopener">공공데이터포털</a> 조달청·ALIO OpenAPI · EA Opportunities · 각 기관 게시판·채용 페이지 — 자세한 내용은 소개</div></footer>
+</div>
+
+</body>
+</html>
